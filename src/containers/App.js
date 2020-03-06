@@ -1,12 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import './App.css'
-
 import CardList from '../components/CardList'
 import SearchBox from '../components/SearchBox';
-import Scroll from '../components/Scroll';
-import ErrorBoundary from '../components/ErrorBoundary';
-import Header from '../components/Header';
+import './App.css'
+import Scroll from '../components/Scroll'
+import ErrorBoundary from '../components/ErrorBoundary'
 
 import { setSearchField, requestRobots } from '../actions'
 
@@ -42,7 +40,7 @@ class App extends React.Component {
             <h1 className='tc'>Loading...</h1> :
             (
                 <div className='tc'>
-                    <Header/>
+                    <h1 className='f1'>Robo Friends</h1>
                     <SearchBox handleChange={onSearchChange} />
                     <Scroll>
                         <ErrorBoundary>
